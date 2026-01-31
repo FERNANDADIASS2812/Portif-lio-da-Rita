@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rita Martins | Fotografia & Jornalismo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --fundo: #ffffff;
+            --cinza-claro: #f8f8f8;
+            --cinza-medio: #eeeeee;
+            --texto: #1a1a1a;
+            --texto-suave: #555555;
+            --vinho-footer: #2a1b1a; 
+            --g1-bg: #f2f2f2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--fundo);
+            color: var(--texto);
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* --- TOP BAR --- */
+        .top-bar {
+            background-color: var(--g1-bg);
+            padding: 10px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--cinza-medio);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand-name {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+
+        .social-icons a {
+            color: var(--texto);
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover { color: #c41212; }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            padding: 15px 8%;
+            display: flex;
+            justify-content: flex-end;
+            background: var(--fundo);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto);
+            margin-left: 35px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover { opacity: 0.6; }
+
+        /* --- HERO --- */
+        .hero-container {
+            width: 100%;
+            background-color: var(--fundo);
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-container img {
+            max-width: 88%;
+            height: auto;
+            display: block;
+            filter: grayscale(10%);
+        }
+
+        /* --- SEÇÕES GERAIS --- */
+        .section-container {
+            padding: 40px 8%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2.section-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- SOBRE MIM --- */
+        .about-text h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .about-text p {
+            color: var(--texto-suave);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* --- ACORDEÃO --- */
+        .category-wrapper {
+            margin-bottom: 10px;
+            border-top: 1px solid var(--cinza-medio);
+        }
+
+        .category-header {
+            padding: 20px 0;
+            cursor: pointer;
+            font-size: 1.1rem;
+            text-transform: uppercase; /* Força maiúsculo no cabeçalho */
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 10px;
+        }
+
+        .category-content.active {
+            max-height: 1500px;
+            padding: 10px 0 30px;
+        }
+
+        .item-card {
+            background: var(--cinza-claro);
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--texto);
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid transparent;
+        }
+
+        .item-card:hover {
+            background: #fff;
+            border: 1px solid var(--texto);
+        }
+
+        .item-card p {
+            font-size: 0.9rem;
+            padding-right: 10px;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background: var(--vinho-footer);
+            color: #ffffff;
+            padding: 60px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+
+        .footer-col p { font-size: 0.85rem; margin-bottom: 8px; color: #d1d1d1; }
+
+        @media (max-width: 768px) {
+            .navbar { justify-content: center; }
+            .nav-links a { margin: 0 10px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="brand-name">Rita Martins</div>
+        <div class="social-icons">
+            <a href="mailto:martinssritaa@outlook.com"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.instagram.com/picsby.rita?" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#sobre">sobre</a>
+            <a href="#portfolio">fotos</a>
+            <a href="#escritos">textos</a>
+            <a href="#contato">contato</a>
+        </div>
+    </nav>
+
+    <section class="hero-container">
+        <img src="FOTO MURAL.jpeg" alt="Capa Portfolio Rita Martins">
+    </section>
+
+    <section class="section-container" id="sobre">
+        <div class="about-text">
+            <h2>SOBRE MIM</h2>
+            <p>Vejo a fotografia e o jornalismo como formas de escuta e observação. Meu trabalho parte do olhar atento ao cotidiano, aos detalhes e às histórias que atravessam pessoas e territórios. Entre imagem e palavra, busco construir narrativas visuais e textuais que informem, provoquem reflexão e criem conexão. Acredito no jornalismo comprometido com a realidade e na fotografia como ferramenta de registro, memória e sensibilidade — uma maneira de contar histórias que muitas vezes não cabem apenas no texto.</p>
+        </div>
+    </section>
+
+    <section class="section-container" id="portfolio">
+        <h2 class="section-title">PORTFÓLIO FOTOGRÁFICO</h2>
+
+        <div class="category-wrapper">
+            <div class="category-header" onclick="toggleSection('rua')">FOTOGRAFIA DE RUA <span>+</span></div>
+            <div id="rua" class="category-content">
+                <a href="https://adobe.ly/45ojXs3" target="_blank" class="item-card"><p>Cotidiano e Rua</p><small>ABRIR ↗</small></a>
+            </div>
+        </div>
+
+        <div class="category-wrapper">
+            <div class="category-header" onclick="toggleSection('evt')">COBERTURA DE EVENTOS <span>+</span></div>
+            <div id="evt" class="category-content">
+                <a href="https://adobe.ly/4bwRgwG" target="_blank" class="item-card"><p>Aula Magna</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/49gmNle" target="_blank" class="item-card"><p>Dia da Raposa</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/4qiKwqQ" target="_blank" class="item-card"><p>Semana de Hotelaria</p><small>ABRIR ↗</small></a>
+            </div>
+        </div>
+
+        <div class="category-wrapper">
+            <div class="category-header" onclick="toggleSection('pessoais')">TRABALHOS PESSOAIS <span>+</span></div>
+            <div id="pessoais" class="category-content">
+                <a href="https://adobe.ly/3NuLmlL" target="_blank" class="item-card"><p>Degustação de Drinks</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/3Niz3sE" target="_blank" class="item-card"><p>Foto do Jaleco</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/49S11US" target="_blank" class="item-card"><p>UseMahlia</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/4ti7fp1" target="_blank" class="item-card"><p>OverDrive</p><small>ABRIR ↗</small></a>
+            </div>
+        </div>
+
+        <div class="category-wrapper">
+            <div class="category-header" onclick="toggleSection('exp')">EXPERIMENTAÇÕES FOTOGRÁFICAS <span>+</span></div>
+            <div id="exp" class="category-content">
+                <a href="https://adobe.ly/49p0zfp" target="_blank" class="item-card"><p>Ensaios e Testes</p><small>ABRIR ↗</small></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container" id="escritos">
+        <h2 class="section-title">PRODUÇÃO TEXTUAL</h2>
+        <div class="category-wrapper">
+            <div class="category-header" onclick="toggleSection('textos-jor')">ARTIGOS E REPORTAGENS <span>+</span></div>
+            <div id="textos-jor" class="category-content">
+                <a href="https://medium.com/@martinssritaa/dias-de-guerra-b2b550d30b6a" target="_blank" class="item-card"><p>Dias de Guerra</p><small>LER ↗</small></a>
+                <a href="https://medium.com/@martinssritaa/arte-ou-neg%C3%B3cio-quando-o-grafite-vira-produto-a173bace46c0" target="_blank" class="item-card"><p>Arte ou negócio? Quando o grafite vira produto</p><small>LER ↗</small></a>
+                <a href="https://medium.com/@fotoufrrj/as-cores-do-cotidiano-a-arte-fotogr%C3%A1fica-de-luiz-braga-31ab89bf2cfc" target="_blank" class="item-card"><p>As cores do cotidiano: a arte fotográfica de Luiz Braga</p><small>LER ↗</small></a>
+                <a href="https://medium.com/@fotoufrrj/v%C3%A3o-lembrar-de-mim-para-sempre-b4f02c9dfb26" target="_blank" class="item-card"><p>"Vão lembrar de mim para sempre"</p><small>LER ↗</small></a>
+                <a href="https://democratizacaodacomunicacao.netlify.app/as%20vozes%20das%20comunidades" target="_blank" class="item-card"><p>As vozes das comunidades</p><small>LER ↗</small></a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-col">
+            <h4>Rita Martins</h4>
+            <p>Estudante de Jornalismo & Fotógrafa</p>
+            <p>© 2026. Rio de Janeiro.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Contato</h4>
+            <p><i class="fa-regular fa-envelope"></i> martinssritaa@outlook.com</p>
+                <p> @picsby.rita </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSection(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('active');
+            const span = element.previousElementSibling.querySelector('span');
+            span.innerText = element.classList.contains('active') ? '-' : '+';
+        }
+    </script>
+
+</body>
+</html>
