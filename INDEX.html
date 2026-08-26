@@ -136,7 +136,7 @@
             padding: 20px 0;
             cursor: pointer;
             font-size: 1.1rem;
-            text-transform: uppercase; /* Força maiúsculo no cabeçalho */
+            text-transform: uppercase;
             letter-spacing: 1px;
             display: flex;
             justify-content: space-between;
@@ -152,8 +152,9 @@
         }
 
         .category-content.active {
-            max-height: 1500px;
+            max-height: 2500px; 
             padding: 10px 0 30px;
+            display: block; 
         }
 
         .item-card {
@@ -166,6 +167,7 @@
             justify-content: space-between;
             align-items: center;
             border: 1px solid transparent;
+            margin-bottom: 10px;
         }
 
         .item-card:hover {
@@ -173,9 +175,56 @@
             border: 1px solid var(--texto);
         }
 
-        .item-card p {
-            font-size: 0.9rem;
-            padding-right: 10px;
+        /* --- ESTILIZAÇÃO DO ARTIGO (NOVO) --- */
+        .artigo-completo {
+            padding: 20px;
+            background: #fff;
+            line-height: 1.8;
+            color: var(--texto-suave);
+        }
+
+        .artigo-completo h3 {
+            color: var(--texto);
+            margin: 25px 0 10px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .artigo-meta {
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--cinza-medio);
+            padding-bottom: 10px;
+        }
+
+        .artigo-olho {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--texto);
+            text-align: center;
+            padding: 30px 10%;
+            margin: 20px 0;
+            border-top: 1px solid var(--cinza-medio);
+            border-bottom: 1px solid var(--cinza-medio);
+        }
+
+        .artigo-box {
+            background: var(--cinza-claro);
+            border-left: 4px solid var(--vinho-footer);
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .artigo-box h5 {
+            color: var(--texto);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .artigo-box p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
         }
 
         /* --- RODAPÉ --- */
@@ -216,7 +265,7 @@
 
     <nav class="navbar">
         <div class="nav-links">
-            <a href="#sobre">sobre</a>
+            <a href="#sobre">sobre mim</a>
             <a href="#portfolio">fotos</a>
             <a href="#escritos">textos</a>
             <a href="#contato">contato</a>
@@ -230,7 +279,7 @@
     <section class="section-container" id="sobre">
         <div class="about-text">
             <h2>SOBRE MIM</h2>
-            <p>Vejo a fotografia e o jornalismo como formas de escuta e observação. Meu trabalho parte do olhar atento ao cotidiano, aos detalhes e às histórias que atravessam pessoas e territórios. Entre imagem e palavra, busco construir narrativas visuais e textuais que informem, provoquem reflexão e criem conexão. Acredito no jornalismo comprometido com a realidade e na fotografia como ferramenta de registro, memória e sensibilidade — uma maneira de contar histórias que muitas vezes não cabem apenas no texto.</p>
+            <p>Desde sempre fui apaixonada por cultura, arte e fotografia, e foi pelo amor à arte de fotografar que eu acabei me apaixonando pelo Jornalismo. Para mim, a profissão é muito mais do que “dar luz aos fatos”, é amplificar vozes invisíveis, influenciar a opinião pública e democratizar o acesso à informação para pessoas de todas as classes sociais – a comunicação é poder, ela pode transformar tudo e tudo pode transformá-la. Vejo a fotografia e o jornalismo como formas de escuta e observação. Meu trabalho parte do olhar atento ao cotidiano, aos detalhes e às histórias que atravessam pessoas e territórios. Entre imagem e palavra, busco construir narrativas visuais e textuais que informem, provoquem reflexão e criem conexão.</p>
         </div>
     </section>
 
@@ -249,7 +298,8 @@
             <div id="evt" class="category-content">
                 <a href="https://adobe.ly/4bwRgwG" target="_blank" class="item-card"><p>Aula Magna</p><small>ABRIR ↗</small></a>
                 <a href="https://adobe.ly/49gmNle" target="_blank" class="item-card"><p>Dia da Raposa</p><small>ABRIR ↗</small></a>
-                <a href="https://adobe.ly/4qiKwqQ" target="_blank" class="item-card"><p>Semana de Hotelaria</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/4qiKwqQ" target="_blank" class="item-card"><p>Eventos Acadêmicos</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/4gvXcJ3" target="_blank" class="item-card"><p>Fênix fora da Casinha</p><small>ABRIR ↗</small></a>
             </div>
         </div>
 
@@ -260,6 +310,9 @@
                 <a href="https://adobe.ly/3Niz3sE" target="_blank" class="item-card"><p>Foto do Jaleco</p><small>ABRIR ↗</small></a>
                 <a href="https://adobe.ly/49S11US" target="_blank" class="item-card"><p>UseMahlia</p><small>ABRIR ↗</small></a>
                 <a href="https://adobe.ly/4ti7fp1" target="_blank" class="item-card"><p>OverDrive</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/4gvXBLz" target="_blank" class="item-card"><p>Ensaio da Banda Aero</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/44cSSab " target="_blank" class="item-card"><p>Banda Níquel</p><small>ABRIR ↗</small></a>
+                <a href="https://adobe.ly/4d2ulIY" target="_blank" class="item-card"><p>Ensaio Gestante</p><small>ABRIR ↗</small></a>
             </div>
         </div>
 
@@ -273,9 +326,50 @@
 
     <section class="section-container" id="escritos">
         <h2 class="section-title">PRODUÇÃO TEXTUAL</h2>
+        
+        <div class="category-wrapper">
+            <div class="category-header" onclick="toggleSection('artigo-8jan')">O aniversário do quase golpe <span>+</span></div>
+            <div id="artigo-8jan" class="category-content">
+                <div class="artigo-completo">
+                    <span class="artigo-meta">Por Rita Martins | 8 de Janeiro de 2026</span>
+                    
+                    <p>Há três anos, uma ferida ainda aberta no Brasil colocava em pauta todo o jogo político atual e histórico da sociedade brasileira. No dia oito de janeiro de 2023, milhares de pessoas que se diziam “defensoras da pátria”, vestidas com as cores da bandeira do país, invadiram a Praça dos Três Poderes, em Brasília.</p>
+                    
+                    <p>Eles espalharam um rastro de destruição por todo o local, quebrando vidraças e móveis, derrubando estátuas e depredando os patrimônios públicos do lugar. A invasão acarretou um prejuízo milionário. Essa trama não foi feita do dia para a noite. Ela vinha sendo articulada muito antes dos ataques.</p>
+
+                    <p>A trama golpista se inicia nas eleições presidenciais de 2022, quando o ultradireitista, Jair Messias Bolsonaro (PL), questiona a eficácia das urnas eletrônicas, prevê o emprego das forças, suprime a vontade popular e, anos depois investigações da Polícia Federal revelariam a existência de planos que previam inclusive o assassinato de autoridades, como Luiz Inácio Lula da Silva (PT), Geraldo Alckmin e o ministro Alexandre de Moraes.</p>
+
+                    <p>As eleições dividiram o Brasil entre Lula ou Bolsonaro. Contudo, 156,4 milhões de brasileiros aptos a mudarem os rumos do governo federal elegeram o petista, que venceu nas urnas com uma diferença de pouco menos de dois pontos percentuais, com 2,1 milhões de votos.</p>
+
+                    <div class="artigo-olho">
+                        A invasão foi o ápice de uma articulação que buscava tomar o poder oito dias após a posse de Lula.
+                    </div>
+
+                    <p>O que aconteceu no 8 de janeiro e as suas consequências abriram as feridas ainda não cicatrizadas da democracia brasileira. Um país que há pouco mais de 40 anos era governado por uma ditadura militar e ficou conhecido por não responsabilizar os principais responsáveis pelo período ditatorial, tem mais um teste de sua democracia: uma tentativa de golpe de Estado.</p>
+
+                    <p>Entretanto, os rumos da história mudaram. Pela primeira vez, o Brasil responsabilizou criminalmente civis e militares por uma tentativa de golpe de Estado em curso democrático. Do chamado Núcleo Crucial da Trama Golpista, 7 dos 8 integrantes já cumprem pena, entre eles, o ex-presidente Jair Bolsonaro. O deputado estadual Alexandre Ramagem (PL-RJ), presente no núcleo principal, ainda não foi preso e se encontra foragido da justiça.</p>
+
+                    <p>Essas prisões dividiram o país em dois: os indivíduos pró-anistia dos presos políticos e os contra a absolvição dos responsáveis pela tentativa de abolição do Estado democrático. Por um lado, a extrema direita bolsonarista gritava: Anistia Já. Por outro, a esquerda e cidadãos que iam contra a PEC da Blindagem e outras que o Congresso pautava em 2025 para tentar absolver ou diminuir as penas dos criminalizados pelo evento.</p>
+
+                    <div class="artigo-box">
+                        <h5>Informações Complementares:</h5>
+                        <p><strong>PL DA DOSIMETRIA:</strong> Projeto de lei que prevê a redução de penas dos condenados pelos ataques do dia 8 de Janeiro. O texto foi aprovado pela Câmara, mas vetado pelo Presidente.</p>
+                        <p><strong>PL DA ANISTIA:</strong> Propõe anistia ampla aos envolvidos na tentativa de golpe. Houve pedido de urgência pressionado pela bancada do PL e aliados.</p>
+                        <p><strong>PEC DA BLINDAGEM:</strong> Protege parlamentares de prisão e investigação imediata. Após intensos debates, o texto foi arquivado.</p>
+                    </div>
+
+                    <h3>Uma ferida que nunca irá cicatrizar</h3>
+                    <p>Desde a redemocratização, em 1988, a democracia brasileira atravessa diversas provas de fogo que expõem tanto a sua força quanto as suas fragilidades estruturais. A anistia ampla aos militares envolvidos no golpe de estado, que acarretou num período obscuro da constitucionalidade do país, serviram como o cimento da reconstrução do Estado de Direito. Isso deixou abertas as cicatrizes que ainda hoje latejam nas relações entre poder civil e poder fardado.</p>
+                    
+                    <p>O Brasil vive uma <strong>Democracia Testada</strong>, esse termo refere-se às tentativas de retrocesso que o país viveu: o Estado Novo de Getúlio Vargas, a Ditadura Militar, o Impeachment de Dilma Rousseff, e o 8 de Janeiro. Todos esses eventos refletem a fragilidade da política no Brasil. Muito mais que isso, ecoa a repetição dos mesmos erros cometidos no passado. Se a sociedade brasileira não compreender seu passado, um futuro constitucional será apenas um desejo.</p>
+                </div>
+            </div>
+        </div>
+
         <div class="category-wrapper">
             <div class="category-header" onclick="toggleSection('textos-jor')">ARTIGOS E REPORTAGENS <span>+</span></div>
             <div id="textos-jor" class="category-content">
+                <a href="https://artedrag.netlify.app/" target="_blank" class="item-card"><p>Arte Drag</p><small>LER ↗</small></a>
                 <a href="https://medium.com/@martinssritaa/dias-de-guerra-b2b550d30b6a" target="_blank" class="item-card"><p>Dias de Guerra</p><small>LER ↗</small></a>
                 <a href="https://medium.com/@martinssritaa/arte-ou-neg%C3%B3cio-quando-o-grafite-vira-produto-a173bace46c0" target="_blank" class="item-card"><p>Arte ou negócio? Quando o grafite vira produto</p><small>LER ↗</small></a>
                 <a href="https://medium.com/@fotoufrrj/as-cores-do-cotidiano-a-arte-fotogr%C3%A1fica-de-luiz-braga-31ab89bf2cfc" target="_blank" class="item-card"><p>As cores do cotidiano: a arte fotográfica de Luiz Braga</p><small>LER ↗</small></a>
@@ -294,7 +388,7 @@
         <div class="footer-col">
             <h4>Contato</h4>
             <p><i class="fa-regular fa-envelope"></i> martinssritaa@outlook.com</p>
-                <p> @picsby.rita </p>
+            <p><i class="fa-brands fa-instagram"></i> @picsby.rita </p>
         </div>
     </footer>
 
